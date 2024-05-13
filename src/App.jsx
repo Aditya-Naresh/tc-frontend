@@ -7,6 +7,8 @@ import RegisterPage from "./pages/user/RegisterPage.jsx";
 import AdminLoginPage from "./pages/admin/AdminLoginPage.jsx";
 import AdminPrivateRoute from "./privateRoutes/AdminPrivateRoute.jsx";
 import AdminHomePage from "./pages/admin/AdminHomePage.jsx";
+import AdminTutorManagement from "./pages/admin/AdminTutorManagement.jsx";
+import AdminStudentManagement from "./pages/admin/AdminStudentManagement.jsx";
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
 
           <Route element={<AdminPrivateRoute />}>
             <Route element={<AdminHomePage />} path="admin/" />
+            <Route element={<AdminTutorManagement />} path="admin/tutor/" />
+            <Route element={<AdminStudentManagement />} path="admin/student" />
           </Route>
         </Routes>
       </BrowserRouter>

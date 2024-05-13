@@ -1,9 +1,13 @@
 import React from 'react'
 import AdminNavbar from '../../components/admin/AdminNavbar'
+import AdminBreadcrumb from '../../components/admin/AdminBreadcrumb'
 
 const AdminHomePage = () => {
   return (
-    <div><AdminNavbar /></div>
+    <div>
+      <AdminNavbar name={"Admin Dashboard"} />
+      <AdminBreadcrumb/>
+    </div>
   )
 }
 
