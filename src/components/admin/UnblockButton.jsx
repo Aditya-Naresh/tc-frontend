@@ -25,9 +25,7 @@ const UnblockButton = ({ id, isTutor, link }) => {
       );
     }
 
-    if(response.status == 200){
-        window.location.reload()
-    }
+   
   };
   return (
     <button

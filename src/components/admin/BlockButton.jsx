@@ -1,10 +1,7 @@
 import axios from "axios";
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
 
-const BlockButton = ({ id, isTutor, link }) => {
-  const  navigate = useNavigate()
-  const location = useLocation()
+const BlockButton = ({ id, isTutor }) => {
   const handleBlock = async (e) => {
     e.preventDefault()
     let updated_val = {
@@ -25,16 +22,13 @@ const BlockButton = ({ id, isTutor, link }) => {
       );
     }
 
-    if(response.status == 200){
-        window.location.reload()
-    }
   };
   return (
     <button
       onClick={handleBlock}
       className="bg-red-500 hover:bg-red-700 text-black font-bold py-2 px-2 rounded m-auto border border-slate-600 w-auto"
     >
-      BlockButton
+      Block User
     </button>
   );
 };

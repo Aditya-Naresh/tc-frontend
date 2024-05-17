@@ -9,6 +9,8 @@ import AdminPrivateRoute from "./privateRoutes/AdminPrivateRoute.jsx";
 import AdminHomePage from "./pages/admin/AdminHomePage.jsx";
 import AdminTutorManagement from "./pages/admin/AdminTutorManagement.jsx";
 import AdminStudentManagement from "./pages/admin/AdminStudentManagement.jsx";
+import ProfilePage from "./pages/user/ProfilePage.jsx";
+import AdminTutorApproval from "./pages/admin/AdminTutorApproval.jsx";
 
 const App = () => {
   return (
@@ -22,12 +24,14 @@ const App = () => {
 
           <Route element={<UserPrivateRoute />}>
             <Route element={<HomePage />} path="/" />
+            <Route element={<ProfilePage />} path="profile/" />
           </Route>
 
           <Route element={<AdminPrivateRoute />}>
             <Route element={<AdminHomePage />} path="admin/" />
             <Route element={<AdminTutorManagement />} path="admin/tutor/" />
-            <Route element={<AdminStudentManagement />} path="admin/student" />
+            <Route element={<AdminStudentManagement />} path="admin/student/" />
+            <Route element={<AdminTutorApproval /> } path="admin/tutor_approval" />
           </Route>
         </Routes>
       </BrowserRouter>

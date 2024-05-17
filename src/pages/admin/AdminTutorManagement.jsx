@@ -18,7 +18,7 @@ const AdminTutorManagement = () => {
         }
 
         fetchData()
-    }, [])
+    }, [data])
   return (
     <div>
         <AdminNavbar name={"Tutor"} />

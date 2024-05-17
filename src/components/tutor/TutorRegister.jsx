@@ -64,6 +64,8 @@ const TutorRegister = () => {
 
       if (response.status === 201) {
         navigate('/')
+      }else{
+        setErrorMessage(response.detail)
       }
     } catch (error) {
       if (error.response) {

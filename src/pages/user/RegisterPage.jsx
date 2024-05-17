@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import TutorRegister from "../../components/tutor/TutorRegister";
 import StudentRegister from "../../components/student/StudentRegister";
-import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
   const [isTutor, setIsTutor] = useState(false);

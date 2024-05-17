@@ -82,7 +82,7 @@ const AdminLogin = () => {
       return (
         <div className="bg-cyan-400 w-full sm:w-1/2 md:w-1/2 lg:w-1/3 flex flex-col items-center justify-center h-auto p-4 sm:p-6">
           <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-900 mb-4 bg-inherit font-bold">
-            Student Login
+            Admin Login
           </h1>
           {<p className="text-lg font-bold text-red-500">{errorMessage}</p>}
           <form className="w-full">

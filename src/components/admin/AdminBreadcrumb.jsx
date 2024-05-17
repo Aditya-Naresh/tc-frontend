@@ -15,6 +15,11 @@ const AdminBreadcrumb = () => {
       <div className="w-auto h-24 border border-cyan-50 flex justify-center items-center">
         <h1>Sessions</h1>
       </div>
+      <div className="w-auto h-24 border border-cyan-50 flex justify-center items-center">
+        <h1>
+          <Link to='/admin/tutor_approval'>Tutor Approval</Link>
+        </h1>
+      </div>
     </div>
   );
 };
