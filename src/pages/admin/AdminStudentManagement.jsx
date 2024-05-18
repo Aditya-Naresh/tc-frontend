@@ -6,6 +6,10 @@ import axios from 'axios'
 
 const AdminStudentManagement = () => {
     const [data, setData] = useState([])
+    const [reRender, setReRender] = useState("")
+    const renderCallback = (value) => {
+        setReRender(value)
+    }
     useEffect(() => {
         const fetchData = async () => {
             try{
@@ -18,13 +22,13 @@ const AdminStudentManagement = () => {
         }
 
         fetchData()
-    }, [])
+    }, [reRender])
     return (
     
     <div>
         <AdminNavbar name={"Students"} />
         <AdminBreadcrumb />
-        <UserManagementTable data={data} link={'admin/student'} />
+        <UserManagementTable data={data} link={'admin/student'}  reRender={renderCallback} />
     </div>
   )
 }

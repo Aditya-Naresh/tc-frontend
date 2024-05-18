@@ -11,6 +11,7 @@ import AdminTutorManagement from "./pages/admin/AdminTutorManagement.jsx";
 import AdminStudentManagement from "./pages/admin/AdminStudentManagement.jsx";
 import ProfilePage from "./pages/user/ProfilePage.jsx";
 import AdminTutorApproval from "./pages/admin/AdminTutorApproval.jsx";
+import EmailVerification from "./pages/user/EmailVerification.jsx";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route element={<LoginPage />} path="login/" />
           <Route element={<RegisterPage />} path="register/" />
+          <Route element={<EmailVerification />} path="confirm_mail/" />
 
           <Route element={<AdminLoginPage/>} path="admin_login/"/>
 

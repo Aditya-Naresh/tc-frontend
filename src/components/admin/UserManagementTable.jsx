@@ -2,7 +2,7 @@ import React from "react";
 import UnblockButton from "./UnblockButton";
 import BlockButton from "./BlockButton";
 
-const UserManagementTable = ({ data, link }) => {
+const UserManagementTable = ({ data, link, reRender }) => {
   return (
     <div className="flex justify-center items-center mx-auto">
       <table className="shadow-lg bg-white border-collapse">
@@ -20,7 +20,7 @@ const UserManagementTable = ({ data, link }) => {
                 {row.first_name} {row.last_name}
               </td>
               <td className="border px-8 py-4 bg-stone-300">{row.email}</td>
-              <td className="border px-8 py-4 bg-stone-300">{row.is_blocked? <UnblockButton  id={row.id} isTutor={row.is_tutor} link={link} /> : <BlockButton id={row.id} isTutor={row.is_tutor} link={link}/>}</td>
+              <td className="border px-8 py-4 bg-stone-300">{row.is_blocked? <UnblockButton  id={row.id} isTutor={row.is_tutor} link={link} reRender = {reRender}/> : <BlockButton id={row.id} isTutor={row.is_tutor} link={link} reRender = {reRender}/>}</td>
               
             </tr>
           ))}

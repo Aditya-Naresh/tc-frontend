@@ -63,7 +63,7 @@ const TutorRegister = () => {
       );
 
       if (response.status === 201) {
-        navigate('/')
+        navigate('/confirm_mail')
       }else{
         setErrorMessage(response.detail)
       }

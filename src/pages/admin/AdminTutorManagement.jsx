@@ -6,6 +6,10 @@ import UserManagementTable from '../../components/admin/UserManagementTable'
 
 const AdminTutorManagement = () => {
     const [data, setData] = useState([])
+    const [reRender, setReRender] = useState("")
+    const renderCallback = (value) => {
+        setReRender(value)
+    }
     useEffect(() => {
         const fetchData = async () => {
             try{
@@ -18,12 +22,12 @@ const AdminTutorManagement = () => {
         }
 
         fetchData()
-    }, [data])
+    }, [reRender])
   return (
     <div>
         <AdminNavbar name={"Tutor"} />
         <AdminBreadcrumb />
-        <UserManagementTable data={data} link={'admin/tutor'}/>
+        <UserManagementTable data={data} link={'admin/tutor'} reRender={renderCallback}/>
     </div>
   )
 }

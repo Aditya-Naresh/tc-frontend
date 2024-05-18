@@ -8,6 +8,7 @@ import ApproveButton from '../../components/admin/ApproveButton'
 const AdminTutorApproval = () => {
   const [data, setData] = useState([])
   const token = useSelector(state => state.auth.tokens.accessToken)
+ 
   useEffect(() => {
     const fetchData = async () => {
       try{
@@ -26,7 +27,7 @@ const AdminTutorApproval = () => {
       }
     }
     fetchData()
-  }, [data])
+  }, [])
   return (
     <div>
         <AdminNavbar name={"Tutor Approval"} />

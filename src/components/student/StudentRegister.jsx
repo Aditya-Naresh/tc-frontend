@@ -63,7 +63,7 @@ const StudentRegister = () => {
       );
 
       if (response.status === 201) {
-        navigate("/");
+        navigate("/confirm_mail");
       }
     } catch (error) {
       if (error.response) {

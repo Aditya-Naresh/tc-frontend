@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 
-const BlockButton = ({ id, isTutor }) => {
+const BlockButton = ({ id, isTutor, reRender }) => {
   const handleBlock = async (e) => {
     e.preventDefault()
     let updated_val = {
@@ -20,7 +20,8 @@ const BlockButton = ({ id, isTutor }) => {
         `http://127.0.0.1:8000/admin/update_student/${id}`,
         updated_val
       );
-    }
+    } 
+    reRender(`Blocked ${id}`)
 
   };
   return (

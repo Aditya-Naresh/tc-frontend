@@ -2,9 +2,8 @@ import axios from "axios";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const UnblockButton = ({ id, isTutor, link }) => {
-  const  navigate = useNavigate()
-  const location = useLocation()
+const UnblockButton = ({ id, isTutor, reRender }) => {
+ 
   const handleUnblock = async (e) => {
     e.preventDefault()
     let updated_val = {
@@ -24,7 +23,7 @@ const UnblockButton = ({ id, isTutor, link }) => {
         updated_val
       );
     }
-
+    reRender(`Unblock ${id}`)
    
   };
   return (
